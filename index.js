@@ -1,7 +1,10 @@
 const wizardsWrapper = document.querySelector('.wizards');
+const search__name = document.querySelector(".search__name")
+
 
 function searchWizards(event) {
     rendorWizards(event.target.value);
+    search__name.innerHTML = event.target.value
 }
 
 async function rendorWizards(searchTerm) {
@@ -12,7 +15,7 @@ async function rendorWizards(searchTerm) {
     console.log(wizardsWrapper);
     wizardsWrapper.innerHTML = wizardsArr.slice(0-6).map((wizard) => {
         return (`
-        <div class="wizards">
+        <div class="wizard">
         <h1>${wizard.firstName || ""} ${wizard.lastName}</h1>
         
         ${wizard.elixirs.map((elixir) => (
@@ -23,7 +26,12 @@ async function rendorWizards(searchTerm) {
 
         </div>
         `);
-    }).join('');
+    }).join('');0
 }
 
 rendorWizards()
+
+function filterWizards(event) {
+        rendorWizards(event.target.value)
+    }
+  

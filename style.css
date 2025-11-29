@@ -134,6 +134,11 @@ nav {
     }
 }
 
+.search__results {
+    display: flex;
+    align-items: center;
+}
+
 .search__text {
     width: 320px;
     height: 75px;
@@ -146,6 +151,13 @@ nav {
     border: 1px solid rgb(232, 213, 213);
     box-sizing: border-box;
     z-index: 1002;
+}
+
+.search__name {
+    color: #f8f8f8;
+    opacity: 0.5;
+    padding: 48px;
+    font-size: 24px;
 }
 
 #filter {
@@ -175,9 +187,14 @@ nav {
 
 .wizards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    text-align: center;
+    padding: 48px;
+}
+
+.wizard {
+    width: 30%;
     padding: 24px;
 }
     

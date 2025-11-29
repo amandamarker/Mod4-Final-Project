@@ -28,7 +28,10 @@
                         onchange="searchWizards(event)">
                     </div>
                     <div class="filter__wizards">
-                        <h1 class="filter__title">Wizards</h1>
+                        <div class="search__results">
+                        <h1 class="filter__title">Wizard Search Results:</h1>
+                        <span class="search__name"></span>
+                        </div>
                     <select id="filter" onchange="filterWizards(event)">
                         <option disabled selected value="">Sort</option>
                         <option value="asc" onclick="sortWizardsAsc()">A-Z</option>
