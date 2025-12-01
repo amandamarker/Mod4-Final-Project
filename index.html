@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wizarding World Houses</title>
+    <title>Movie Search</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/279ed771f5.js" crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
 </head>
 <body id="landing-page">
     <section class="section__nav">
         <nav>
-            <img class="nav__img" src="logo.png" alt="">
             <ul class="nav__link--list">
                 <li class="nav__link">Home</li>
-                <li class="nav__link">Wizards</li>
+                <li class="nav__link">Movies</li>
             </ul>
         </nav>
         </section>
@@ -21,46 +21,45 @@
         <section class="section__header">
             <header class="header__container">
                 <div class="header__content">
-                    <h1 class="header__title">Welcome to the Wizarding World</h1>
-                    <p class="header__description">Discover the witches and wizards of Hogwarts School of Witchcraft and Wizardry.</p>
+                    <h1 class="header__title">Welcome to the world of cinema</h1>
+                    <p class="header__description">Find your movie here.</p>
                     <div class="search__input">
-                        <input class="search__text" placeholder="Seach for a wizard"
-                        onchange="searchWizards(event)">
+                        <input class="search__text" placeholder="Seach for a movie..."
+                        onchange="searchMovies(event)">
                     </div>
-                    <div class="filter__wizards">
+                    <div class="filter__movies">
                         <div class="search__results">
-                        <h1 class="filter__title">Wizard Search Results:</h1>
+                        <h1 class="filter__title">Movie Search Results:</h1>
                         <span class="search__name"></span>
                         </div>
-                    <select id="filter" onchange="filterWizards(event)">
-                        <option disabled selected value="">Sort</option>
-                        <option value="asc" onclick="sortWizardsAsc()">A-Z</option>
-                        <option value="desc" onclick="sortWizardsDesc()">Z-A</option>
+                    <select id="filter" onchange="sortChange(event)">
+                        <option disabled selected value="">Sort By Year</option>
+                        <option value="newest" onclick="sortMoviesAsc()">Newest to Oldest</option>
+                        <option value="oldest" onclick="sortMoviesDesc()">Oldest to Newest</option>
                     </select>
                     </div>
                 </div>
             </header>
         </section>
         <section class="search">
-            <div class="wizards"></div>
+            <div class="movies movies__loading">
+                <i class="fas fa-spinner movies__loading--spinner"></i>
+            </div>
         </section>
         <footer>
     <div class="row footer__row">
-            <figure class="footer__logo">
-                <img src="HP logo.webp" class="footer__logo--img" alt="">
-            </figure>
         <div class="footer__list">
             <a href="" class="
             footer__link
            " target="_blank">Home</a>
                <a href="" class="
             footer__link
-           " target="_blank">Wizards</a>
+           " target="_blank">Movies</a>
                <a href="mailto:amandamarker1090@gmail.com" class="
             footer__link
            " target="_blank">Contact</a>
         </div>
-        <div class="footer__copyright">Copyright © 2025 Wizarding World</div>
+        <div class="footer__copyright">Copyright © 2025</div>
 
 </footer>
 </body>

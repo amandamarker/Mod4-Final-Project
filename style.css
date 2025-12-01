@@ -16,7 +16,7 @@ li {
 
 p {
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 a {
@@ -99,7 +99,7 @@ nav {
     text-align: center;
     font-size: 64px;
     color: white;
-    padding: 48px 0 0 0;
+    padding-top: 24px;
     margin-bottom: 20px;
     animation: fade-up 650ms 400ms backwards;
 
@@ -108,9 +108,8 @@ nav {
 .header__description {
     font-size: 20px;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     text-align: center;
-    padding-bottom: 48px;
     animation: fade-up 650ms 400ms backwards;
 }
 
@@ -118,7 +117,7 @@ nav {
     display: flex;
     position: relative;
     align-items: center;
-    bottom: 48px;
+    /* bottom: 48px; */
     animation: fade-up 1000ms 400ms backwards;
 
 }
@@ -173,19 +172,17 @@ nav {
   max-width: 200px;
 }
 
-.filter__wizards {
+.filter__movies {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 48px;
-
 }
 
 .filter__title {
     color: white;
 }
 
-.wizards {
+.movies {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -193,7 +190,34 @@ nav {
     padding: 48px;
 }
 
-.wizard {
+.movies__loading--spinner {
+    display: none !important;
+}
+
+.movies__loading .movies__loading--spinner {
+    display: block;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
+    font-size: 60px;
+    color: #1a1a2a;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.movie {
     width: 30%;
     padding: 24px;
 }
