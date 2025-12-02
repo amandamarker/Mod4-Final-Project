@@ -33,9 +33,11 @@
                         <span class="search__name"></span>
                         </div>
                     <select id="filter" onchange="sortChange(event)">
-                        <option disabled selected value="">Sort By Year</option>
+                        <option disabled selected value="">Sort</option>
                         <option value="newest" onclick="sortMoviesAsc()">Newest to Oldest</option>
                         <option value="oldest" onclick="sortMoviesDesc()">Oldest to Newest</option>
+                        <option value="aToZ" onclick="sortMoviesAToZ()">A-Z</option>
+                        <option value="ZToA" onclick="sortMoviesZToA()">Z-A</option>
                     </select>
                     </div>
                 </div>

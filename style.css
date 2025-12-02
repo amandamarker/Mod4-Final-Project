@@ -265,6 +265,9 @@ footer {
     align-items: center;
     text-align: center;
    }
+
+   .movie, h3, p {
+    width: 100%;}
 }
 
 

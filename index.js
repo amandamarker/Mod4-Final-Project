@@ -35,6 +35,7 @@ function displayMovies(movieList) {
 }
 
 
+
 function sortChange(event) {
     const sortOption = event.target.value;
     
@@ -45,6 +46,13 @@ function sortChange(event) {
     }
     else if (sortOption === 'oldest') {
         sortedMovies.sort((a, b) => a.Year - b.Year);
+    }
+
+    if (sortOption === 'aToZ') {
+        sortedMovies.sort((a, b) => b.Name - a.Name);
+    }
+    else if (sortOption === 'ZToA') {
+        sortedMovies.sort((a, b) => a.Name - b.Name);
     }
 
     displayMovies(sortedMovies);
